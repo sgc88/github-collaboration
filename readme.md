@@ -105,21 +105,17 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 9. Feel free to delete this practice repository from your local machine and from GitHub. This workflow was intentionally sloppy and I'm hoping that you learned a little bit of what *not* to do.
 
 
-## Tips for Working in Teams
+## Talking Points for Teams
 
-1. Every team member shares the responsibility of creating a product that reflects the viewpoints and contributions of each team member. If you're naturally more outgoing and a leader, this will probably mean taking a back seat sometimes or asking for input from quieter teammates. If you're one of those quiet people, make a dedicated effort to speak out more! This will help you create a project that's better than what you would have come up with individually.
+1. Set guidelines for merging pull requests before you start. How many people should review the pull requests before they're merged?  What branch should they be merged into? (Consider making a "develop" or "staging" branch to merge into instead of merging into the master branch. Once your app is complete, then you can merge your development branch into the master branch as your first major "release.")
 
-2. Communicate,communicate, communicate! Discuss roles, expectations, and timetables before you start coding. Figure out how you want to communicate about the project when you aren't physically with your team.
+2. Make very descriptive commit messages! The team members who are reading them should be able to tell at a glance what you were working on.
 
-3. Set guidelines for merging pull requests. How many people should review the pull requests before they're merged?  What branch should they be merged into? (Consider making a "develop" or "staging" branch to merge into instead of merging into the master branch. Once your app is complete, then you can merge your development branch into the master branch as your first major "release.")
+3. Clearly delineate who's working on what, and keep an updated task list. (Trello is great for this!) Things will go much more smoothly if team members work on features that don't overlap. This is especially important if you're not all working in the physical location. It's not uncommon for wires to get crossed!
 
-4. Make very descriptive commit messages! The team members who are reading them should be able to tell at a glance what you were working on.
+4. Don't have multiple team members working on the same feature branch at one time, on different computers. If you're pair programming with someone, only use one computer to avoid having differing code on the same branch. 
 
-5. Clearly delineate who's working on what, and keep an updated task list. (Trello is great for this!) Things will go much more smoothly if team members work on features that don't overlap. This is especially important if you're not all working in the physical location. It's not uncommon for wires to get crossed!
-
-6. Don't have multiple team members working on the same feature branch at one time, on different computers. If you're pair programming with someone, only use one computer to avoid having differing code on the same branch. 
-
-7. When merge conflicts arise, it's up to the individual contributor to reseolve them. But work with your team! Follow the steps for [resolving merge conflicts locally](#resolving-merge-conflicts-locally), make sure to delete any merge junk from your code, and then push your cleaned-up branch to GitHub.  
+5. When merge conflicts arise, it's up to the individual contributor to reseolve them. But work with your team! Follow the steps for [resolving merge conflicts locally](#resolving-merge-conflicts-locally), make sure to delete any merge junk from your code, and then push your cleaned-up branch to GitHub.  
 
 
 ## Resources
