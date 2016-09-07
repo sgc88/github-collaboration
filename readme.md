@@ -44,15 +44,15 @@ What makes a branch special in git, is that we're always on a specific branch, a
 Terminology: HEAD is simply a reference to the current or most recent commit!
 
 
-![Git Branch Diagram](https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/01.svg)
+<img src="https://www.atlassian.com/git/images/tutorials/collaborating/using-branches/01.svg" width="70%">
 
 
 
 
 
 
-Q. Why is branching an important part of git?
----
+###Q. Why is branching an important part of git?
+
 
 > A. Branches are useful for many reasons, but some of the most common ones:
 
@@ -83,11 +83,16 @@ There are two main scenarios for collaborating on coding projects:
 1. You **fork** another developer's project and make pull requests from *your remote fork* to the *project's remote*.
 2. Another developer makes you a **collaborator** on a project they own, giving you the ability to make pull requests directly from the project's *remote feature branches* to the project's *remote master*. (Note that as a collaborator on a project, you also have the ability to push directly to the master branch, which you should NEVER do.)
 
-For this project, you should be collaborators!
 
 ![github-collab-diagram](https://cloud.githubusercontent.com/assets/7833470/12072895/69abd404-b0b1-11e5-8d8c-4ff54c13b0a0.png)
 
+
+**For this project, you should be collaborators!**
+
 ## Practice: Create and resolve a merge conflict
+
+What happens if two people on a team change the same file?  Merge conflicts (often)!  That might sound like a big deal, but it's easy to handle with your team.  Let's practice resolving a merge conflict.
+
 
 1. Pair up. Have one partner create a brand new repository on GitHub and [add your partner as a collaborator](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/).
 2. The person who created the GitHub repository should create a new project directory locally, generate one  `index.html` file, create a `readme.md` with some content, and push the new app to the remote repository.
@@ -98,6 +103,23 @@ For this project, you should be collaborators!
 7. Choose a pull request to accept first. It shouldn't have any merge conflicts with the master branch, so you can just merge it in on GitHub.
 8. The second pull request should be a little more interesting. We hope that we have created at least one merge conflict. [Resolve the merge conflict locally](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/github-collaboration-workflow.md#resolving-merge-conflicts-locally) on one of your computers and push the fixed version to GitHub.  
 9. Feel free to delete this practice repository from your local machine and from GitHub. This workflow was intentionally sloppy and I'm hoping that you learned a little bit of what *not* to do.
+
+
+## Tips for Working in Teams
+
+1. Every team member shares the responsibility of creating a product that reflects the viewpoints and contributions of each team member. If you're naturally more outgoing and a leader, this will probably mean taking a back seat sometimes or asking for input from quieter teammates. If you're one of those quiet people, make a dedicated effort to speak out more! This will help you create a project that's better than what you would have come up with individually.
+
+2. Communicate,communicate, communicate! Discuss roles, expectations, and timetables before you start coding. Figure out how you want to communicate about the project when you aren't physically with your team.
+
+3. Set guidelines for merging pull requests. How many people should review the pull requests before they're merged?  What branch should they be merged into? (Consider making a "develop" or "staging" branch to merge into instead of merging into the master branch. Once your app is complete, then you can merge your development branch into the master branch as your first major "release.")
+
+4. Make very descriptive commit messages! The team members who are reading them should be able to tell at a glance what you were working on.
+
+5. Clearly delineate who's working on what, and keep an updated task list. (Trello is great for this!) Things will go much more smoothly if team members work on features that don't overlap. This is especially important if you're not all working in the physical location. It's not uncommon for wires to get crossed!
+
+6. Don't have multiple team members working on the same feature branch at one time, on different computers. If you're pair programming with someone, only use one computer to avoid having differing code on the same branch. 
+
+7. When merge conflicts arise, it's up to the individual contributor to reseolve them. But work with your team! Follow the steps for [resolving merge conflicts locally](#resolving-merge-conflicts-locally), make sure to delete any merge junk from your code, and then push your cleaned-up branch to GitHub.  
 
 
 ## Resources
