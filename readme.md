@@ -161,11 +161,13 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 
 1. Choose a pull request to accept first. It shouldn't have any merge conflicts with the master branch, so you can just merge it in on GitHub after your partner has looked over it. 
 
-2. The second pull request should be a little more interesting. We hope that we have created at least one merge conflict. You'll know you have a merge conflict if GitHub tells you you "cannot merge automatically."  The person whose commit has a conflict should now [resolve the merge conflict locally](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/github-collaboration-workflow.md#resolving-merge-conflicts-locally), with help from the person who already made changes. Once you've tested that the merged version still looks how you want, commit and push your changes to GitHub. 
+2. The second pull request should be a little more interesting. We hope that we have created at least one merge conflict. You'll know you have a merge conflict if GitHub tells you you "cannot merge automatically."  
 
-3. Have your partner review the change and merge the pull request. 
+3. The person whose commit has a conflict should now [follow the collaborator scenario](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/github-collaboration-workflow.md#collaborator-scenario) starting at step 3 and using their branch name instead of `auth`. Resolve the merge conflicts locally with help from the person who already made changes. Once you've tested that the merged version still looks how you want, commit and push your changes to GitHub. 
 
-3. Feel free to delete this practice repository from your local machine and from GitHub. 
+4. Have your partner review the change and merge the pull request. 
+
+5. Feel free to delete this practice repository from your local machine and from GitHub. 
 
 ## Talking Points for Teams
 
