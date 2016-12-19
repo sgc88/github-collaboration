@@ -17,13 +17,16 @@ Location: SF
 
 - Using git repositories for collaboration will be important throughout a web developer's career.
 
+- Branches are git's solution for managing different variations of a project, allowing developers to try things out safely or develop different features simultaneously. 
+
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-
 - Create their own git branches and explain a pattern for using branches to develop a full application.
+
 - Make a new repository and add another developer as a collaborator.
+
 - Resolve a merge conflict.
 
 ### Where should we be now?
@@ -31,15 +34,16 @@ Location: SF
 *Before this workshop, developers should already be able to:*
 
 * Use git to stage and commit changes locally.
-* Explain what the following terms mean for GitHub: pull, push, fork, clone, pull request.
+
+* Explain what the following terms mean for GitHub: pull, push, fork, clone.
 
 ## Branches
 
-In Git, branches are a part of your everyday development process. When you want to add a new feature or fix a bug — no matter how big or how small — you spawn a new branch to encapsulate your changes. This makes sure that unstable code is never committed to the main code base, and it gives you the chance to clean up your feature’s history before merging it into the main branch.
+In Git, branches will be a part of your everyday development process. When you want to add a new feature or fix a bug — no matter how big or how small — you'll creat a new branch to hold your changes. This makes sure that unstable code is never committed to the main code base, and it gives you the chance to clean up your feature’s history before merging it into the main branch.
 
 Branches are incredibly lightweight "movable pointers" that help us as developers make experimental changes! A branch in git is just a label or pointer to a particular commit in a repository, along with all of it's history (parent commits).
 
-What makes a branch special in git, is that we're always on a specific branch, and when we commit, the current branch HEAD moves forward to the new commit. Another way to say that is the HEAD always stays at the tip of the branch.
+What makes a branch special in git is that we're always on a specific branch. When we commit, the current branch HEAD moves forward to the new commit. Another way to say that is the HEAD always stays at the tip of the branch.
 
 Terminology: HEAD is simply a reference to the current or most recent commit!
 
@@ -94,16 +98,74 @@ There are two main scenarios for collaborating on coding projects:
 What happens if two people on a team change the same file?  Merge conflicts (often)!  That might sound like a big deal, but it's easy to handle with your team.  Let's practice resolving a merge conflict.
 
 
-1. Pair up. Have one partner create a brand new repository on GitHub and [add your partner as a collaborator](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/).
-2. The person who created the GitHub repository should create a new project directory locally, generate one  `index.html` file, create a `readme.md` with some content, and push the new app to the remote repository.
-3. The collaborator should then clone this repository.
-4. Each person is about to change the README completely, and add 2 elements to `index.html`.  FIRST! Each person should start a new feature branch.  (Name them different things, like `better-readme` and `best-readme`.) You can check that you have all of the branches with `git branch`-that will print all of the branch names.
-5. Now, have the original repo creator commit and push the work to GitHub on *their* branch. (E.g., `git push origin better-readme`.)  Open a pull request from the new branch to the master branch.
-6. The collaborator should commit their changes and push the work to GitHub on *their* branch. (E.g., `git push origin best-readme`.) Open a pull request from the new branch to the master branch.
-7. Choose a pull request to accept first. It shouldn't have any merge conflicts with the master branch, so you can just merge it in on GitHub.
-8. The second pull request should be a little more interesting. We hope that we have created at least one merge conflict. [Resolve the merge conflict locally](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/github-collaboration-workflow.md#resolving-merge-conflicts-locally) on one of your computers and push the fixed version to GitHub.  
-9. Feel free to delete this practice repository from your local machine and from GitHub. This workflow was intentionally sloppy and I'm hoping that you learned a little bit of what *not* to do.
+#### Set Up a Repository!
+1. Pair up. Have one partner create a brand new repository locally, make an index.html and a README.md, and commit:
 
+ ```bash
+ mkdir git-collaboration-practice
+ cd git-collaboration-practice
+ git init
+ touch index.html
+ touch README.md
+ git add index.html README.md
+ git commit -m "sets up initial file structure"
+ ```
+ 
+2. Have the same partner create a new repository on GitHub. The repo owner should copy the clone URL for the new repository to their clipboard.
+
+3. Back in the local repository, add the GitHub repository as a new `origin` remote, and push the single commit so far to GitHub:
+
+ ```bash
+ git remote add origin <YOUR CLONE URL>
+ git push origin master
+ ```
+ 
+4. On GitHub, check that the first commit is showing in the repository. 
+
+#### Collaborate!
+
+4. Now, the repository owner should [add your partner as a collaborator](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/).
+
+3. The collaborator should clone the repository.  The collaborator will not need to fork. 
+
+4. Each person is about to change the files, so each person will need to make one new branch in their local repository. Name the branches with different branch names, like `intro` and `authors`:
+
+ The repo owner might do:
+ ```bash
+ git branch intro
+ git checkout intro
+ ```
+ 
+ The collaborator might do:
+ ```bash
+ git branch authors
+ git checkout authors
+ ```
+ 
+ > As a shorthand, the `git checkout -b` command creates and checks out a branch all at once. For example, `git checkout -b intro`. 
+
+5. Each person should now make a change to the `README.md` and to the `index.html` on their own local copy. Add at least 2 lines to each file, then `git add` and `git commit` your changes. 
+
+6. Now, each person should push their work to GitHub **on their branch**. 
+  ```bash
+  git push origin intro
+  ```
+
+  ```bash
+  git push origin authors
+  ```
+
+7. [Open a pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) from each new branch to the master branch.
+
+#### Merge Changes!
+
+1. Choose a pull request to accept first. It shouldn't have any merge conflicts with the master branch, so you can just merge it in on GitHub after your partner has looked over it. 
+
+2. The second pull request should be a little more interesting. We hope that we have created at least one merge conflict. You'll know you have a merge conflict if GitHub tells you you "cannot merge automatically."  The person whose commit has a conflict should now [resolve the merge conflict locally](https://github.com/SF-WDI-LABS/shared_modules/blob/master/how-to/github-collaboration-workflow.md#resolving-merge-conflicts-locally), with help from the person who already made changes. Once you've tested that the merged version still looks how you want, commit and push your changes to GitHub. 
+
+3. Have your partner review the change and merge the pull request. 
+
+3. Feel free to delete this practice repository from your local machine and from GitHub. 
 
 ## Talking Points for Teams
 
@@ -124,6 +186,7 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 * <a href="https://help.github.com/articles/adding-collaborators-to-a-personal-repository" >Adding collaborators to a personal repository</a>
 * <a href="http://nvie.com/posts/a-successful-git-branching-model" >A successful Git branching model from industry</a>
 * <a href="https://help.github.com/articles/using-pull-requests" >Using pull requests</a>
+* <a href="https://www.youtube.com/watch?feature=player_detailpage&v=ZDR433b0HJY#t=2791s">A talk on Git branches and HEAD</a>
 
 ## Tutorials
 
@@ -133,4 +196,4 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
   * Think about the results you expect before you press enter.
   * Whenever you see/type `git commit`, you can assume some changes have been made and staged.
 * <a href="https://www.codeschool.com/courses/try-git" >Try Git - Code School</a>
-* <a href="https://github.com/Gazler/githug" >githug</a>
+* <a href="https://github.com/Gazler/githug">githug</a>
