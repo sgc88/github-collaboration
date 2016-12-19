@@ -190,10 +190,11 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 
 ## Tutorials
 
-* **We recommend you try Levels 1-3 of this [git branching tutorial](http://pcottle.github.io/learnGitBranching/).** Stop at 4: "Rebase Introduction". Take your time:
+* **We recommend you try Levels 1-3 in the main section  of this [git branching tutorial](http://pcottle.github.io/learnGitBranching/).** Stop at 4: "Rebase Introduction". Take your time:
   * Read all the dialogs. They are part of the tutorial.
   * Think about what you want to achieve.
   * Think about the results you expect before you press enter.
   * Whenever you see/type `git commit`, you can assume some changes have been made and staged.
+* The top row of the Remote section of the [git branching tutorial](http://pcottle.github.io/learnGitBranching/) also covers helpful material for collaborating through Git and GitHub. 
 * <a href="https://www.codeschool.com/courses/try-git" >Try Git - Code School</a>
 * <a href="https://github.com/Gazler/githug">githug</a>
