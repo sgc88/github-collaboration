@@ -189,6 +189,7 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 * <a href="http://nvie.com/posts/a-successful-git-branching-model" >A successful Git branching model from industry</a>
 * <a href="https://help.github.com/articles/using-pull-requests" >Using pull requests</a>
 * <a href="https://www.youtube.com/watch?feature=player_detailpage&v=ZDR433b0HJY#t=2791s">A talk on Git branches and HEAD</a>
+* <a href="http://ohshitgit.com/">**Oh Shit, Git!** - how to fix git mistakes</a>
 
 ## Tutorials
 
