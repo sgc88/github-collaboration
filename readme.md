@@ -124,11 +124,11 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 
 #### Collaborate!
 
-4. Now, the repository owner should [add your partner as a collaborator](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/).
+1. Now, the repository owner should [add your partner as a collaborator](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/).
 
-3. The collaborator should clone the repository.  The collaborator will not need to fork. 
+2. The collaborator should clone the repository.  The collaborator will not need to fork. 
 
-4. Each person is about to change the files, so each person will need to make one new branch in their local repository. Name the branches with different branch names, like `intro` and `authors`:
+3. Each person is about to change the files, so each person will need to make one new branch in their local repository. Name the branches with different branch names, like `intro` and `authors`:
 
  The repo owner might do:
  ```bash
@@ -144,9 +144,9 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
  
  > As a shorthand, the `git checkout -b` command creates and checks out a branch all at once. For example, `git checkout -b intro`. 
 
-5. Each person should now make a change to the `README.md` and to the `index.html` on their own local copy. Add at least 2 lines to each file, then `git add` and `git commit` your changes. 
+4. Each person should now make a change to the `README.md` and to the `index.html` on their own local copy. Add at least 2 lines to each file, then `git add` and `git commit` your changes. 
 
-6. Now, each person should push their work to GitHub **on their branch**. 
+5. Now, each person should push their work to GitHub **on their branch**. 
   ```bash
   git push origin intro
   ```
@@ -155,7 +155,7 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
   git push origin authors
   ```
 
-7. [Open a pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) from each new branch to the master branch.
+6. [Open a pull request](https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request) from each new branch to the master branch.
 
 #### Merge Changes!
 
@@ -171,7 +171,7 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 
 ## Talking Points for Teams
 
-1. Set guidelines for merging pull requests before you start. How many people should review the pull requests before they're merged?  What branch should they be merged into? (Consider making a "develop" or "staging" branch to merge into instead of merging into the master branch. Once your app is complete, then you can merge your development branch into the master branch as your first major "release.")
+1. Set guidelines for merging pull requests before you start. How many people should review the pull requests before they're merged?  What branch should they be merged into? (Consider making a "develop" or "staging" branch to merge into instead of merging into the master branch. Once a working version  of your app is complete, then you can merge your development branch into the master branch as your first major "release.")
 
 2. Make very descriptive commit messages! The team members who are reading them should be able to tell at a glance what you were working on.
 
