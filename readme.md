@@ -39,7 +39,7 @@ Location: SF
 
 ## Branches
 
-In Git, branches will be a part of your everyday development process. When you want to add a new feature or fix a bug — no matter how big or how small — you'll creat a new branch to hold your changes. This makes sure that unstable code is never committed to the main code base, and it gives you the chance to clean up your feature’s history before merging it into the main branch.
+In Git, branches will be a part of your everyday development process. When you want to add a new feature or fix a bug — no matter how big or how small — you'll create a new branch to hold your changes. This makes sure that unstable code is never committed to the main code base, and it gives you the chance to clean up your feature’s history before merging it into the main branch.
 
 Branches are incredibly lightweight "movable pointers" that help us as developers make experimental changes! A branch in git is just a label or pointer to a particular commit in a repository, along with all of it's history (parent commits).
 
@@ -175,7 +175,7 @@ What happens if two people on a team change the same file?  Merge conflicts (oft
 
 2. Make very descriptive commit messages! The team members who are reading them should be able to tell at a glance what you were working on.
 
-3. Clearly delineate who's working on what, and keep an updated task list. (Trello is great for this!) Things will go much more smoothly if team members work on features that don't overlap. This is especially important if you're not all working in the physical location. It's not uncommon for wires to get crossed!
+3. Clearly delineate who's working on what, and keep an updated task list. (Trello is great for this!) Things will go much more smoothly if team members work on features that don't overlap. This is especially important if you're not all working in the same physical location. It's not uncommon for wires to get crossed!
 
 4. Don't have multiple team members working on the same feature branch at one time, on different computers. If you're pair programming with someone, only use one computer to avoid having differing code on the same branch. 
 
