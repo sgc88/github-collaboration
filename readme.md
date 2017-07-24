@@ -55,7 +55,7 @@ Terminology: HEAD is simply a reference to the current or most recent commit!
 
 
 
-###Q. Why is branching an important part of git?
+### Q. Why is branching an important part of git?
 
 
 > A. Branches are useful for many reasons, but some of the most common ones:
